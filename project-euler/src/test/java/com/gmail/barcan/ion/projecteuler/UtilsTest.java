@@ -22,4 +22,22 @@ class UtilsTest {
         }
     }
 
+    @Test
+    void isPalindrome() {
+        for (int i = 0; i < 10; i++) {
+            assertTrue(Utils.isPalindrome(i));
+        }
+        for (int i = 11; i < 1000; i++) {
+            String s = Integer.toString(i);
+            assertEquals(s.charAt(0) == s.charAt(s.length() - 1), Utils.isPalindrome(i));
+        }
+
+        assertTrue(Utils.isPalindrome(1001));
+        assertFalse(Utils.isPalindrome(1021));
+
+        assertTrue(Utils.isPalindrome(21012));
+        assertFalse(Utils.isPalindrome(21032));
+
+    }
+
 }

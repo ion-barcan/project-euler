@@ -36,4 +36,20 @@ public class Utils {
         return true;
     }
 
+    public static boolean isPalindrome(long n) {
+        if (n < 0) {
+            n = Math.abs(n);
+        }
+        if (n < 10) {
+            return true;
+        }
+        String s = Long.toString(n);
+        for (int i = 0; i < (s.length() / 2); i++) {
+            if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
