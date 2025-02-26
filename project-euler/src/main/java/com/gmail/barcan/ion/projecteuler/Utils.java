@@ -52,4 +52,22 @@ public class Utils {
         return true;
     }
 
+    /**
+     * original Euclid algorithm
+     */
+    public static long greatestCommonDivisor(long a, long b) {
+        while (a != b) {
+            if (a > b) {
+                a -= b;
+            } else {
+                b -= a;
+            }
+        }
+        return a;
+    }
+
+    public static long leastCommonMultiple(long a, long b) {
+        return a * b / greatestCommonDivisor(a, b);
+    }
+
 }

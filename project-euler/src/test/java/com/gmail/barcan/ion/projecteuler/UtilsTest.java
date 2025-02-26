@@ -40,4 +40,30 @@ class UtilsTest {
 
     }
 
+    @Test
+    void greatestCommonDivisor() {
+        assertEquals(6, Utils.greatestCommonDivisor(18, 24));
+        assertEquals(6, Utils.greatestCommonDivisor(24, 18));
+        assertEquals(1, Utils.greatestCommonDivisor(11, 17));
+        assertEquals(1, Utils.greatestCommonDivisor(17, 11));
+        assertEquals(13, Utils.greatestCommonDivisor(13, 13));
+        assertEquals(20, Utils.greatestCommonDivisor(20, 20));
+    }
+
+    @Test
+    void leastCommonMultiple() {
+        assertEquals(1, Utils.leastCommonMultiple(1, 1));
+        assertEquals(7, Utils.leastCommonMultiple(1, 7));
+        assertEquals(7, Utils.leastCommonMultiple(7, 1));
+        assertEquals(10, Utils.leastCommonMultiple(2, 5));
+        assertEquals(10, Utils.leastCommonMultiple(5, 2));
+        assertEquals(10, Utils.leastCommonMultiple(2, 10));
+        assertEquals(10, Utils.leastCommonMultiple(10, 2));
+        assertEquals(10, Utils.leastCommonMultiple(5, 10));
+        assertEquals(10, Utils.leastCommonMultiple(10, 5));
+        assertEquals(20, Utils.leastCommonMultiple(4, 5));
+        assertEquals(20, Utils.leastCommonMultiple(5, 4));
+        assertEquals(20, Utils.leastCommonMultiple(4, 10));
+        assertEquals(20, Utils.leastCommonMultiple(10, 4));
+    }
 }
